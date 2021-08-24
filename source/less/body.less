@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "adobe-clean";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src:
+    local("AdobeClean-Light"),
+    local("AdobeClean-Regular"),
+    local("adobecleanlight"),
+    url("../fonts/AdobeClean-Light.woff") format("woff"),
+    url("../fonts/AdobeClean-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "adobe-clean";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src:
+    local("AdobeClean"),
+    local("AdobeClean-Bold"),
+    local("adobecleanbold"),
+    url("../fonts/AdobeClean-Bold.woff") format("woff"),
+    url("../fonts/AdobeClean-Bold.ttf") format("truetype");
+}
+
+body {
+  min-width: 768px;
+  .indents-none;
+  font-family: "adobe-clean", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-style: normal;
+  color: @black;
+}
+
+a {
+  text-decoration: none;
+}
