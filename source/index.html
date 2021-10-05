@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Договоры</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <nav class="main-nav">
         <div class="main-nav__wrapper">
-          <img class="main-nav__logo" src="#" width="100" heoght="100" alt="логотип">
+          <img class="main-nav__logo" src="img/logo.png" width="40" height="50" alt="логотип">
           <ul class="main-nav__menu-list menu-list">
             <li class="menu-list__item"><a href="#">Документы</a></li>
             <li class="menu-list__item"><a href="#">Конструктор</a></li>
@@ -17,84 +18,70 @@
           </ul>
           <div class="main-nav__select"></div>
           <ul class="main-nav__user-list user-list">
-            <li class="user-list__item"><a href="#" title="Справка"></a></li>
-            <li class="user-list__item"><a href="#" title="Настройки"></a></li>
-            <li class="user-list__item"><a href="#" title="Авторизация"></a></li>
+            <li class="user-list__item"><a href="#" title="Справка">Справка</a></li>
+            <li class="user-list__item"><a href="#" title="Настройки">Настройки</a></li>
+            <li class="user-list__item"><a href="#" title="Авторизация">Авторизация</a></li>
           </ul>
         </div>
       </nav>
     </header>
     <main class="page-main">
       <section class="page-main__left-column side-menu">
-        <aside class="side-menu">
-          <button class="side-menu__btn btn">Создать</button>
-          <ul class="side-menu__list left-list">
-            <li class="left-list__item"><a href="#">Входящие</a></li>
-            <li class="left-list__item"><a href="#">Отправленные</a></li>
-            <li class="left-list__item"><a href="#">Черновики</a></li>
-          </ul>
-        </aside>
+        <div class="side-menu__wrapper">
+            <button class="side-menu__btn btn">Создать</button>
+            <ul class="side-menu__list left-list">
+              <li class="left-list__item"><a href="#">Входящие</a></li>
+              <li class="left-list__item"><a href="#">Отправленные</a></li>
+              <li class="left-list__item"><a href="#">Черновики</a></li>
+            </ul>
+        </div>
       </section>
       <section class="page-main__right-column">
-        <table class="contract-table contract-table--state">
-          <tr class="contract-table__row contract-table__row--state">
-            <td class="contract-table__cell contract-table__cell--state"><a href="#">Новые</a></td>
-          </tr>
-          <tr class="contract-table__row contract-table__row--state">
-            <td class="contract-table__cell contract-table__cell--state">
-              <a href="#">Требуют согласования</a>
-            </td>
-          </tr>
-          <tr class="contract-table__row contract-table__row--state">
-            <td class="contract-table__cell contract-table__cell--state">
-              <a href="#">Обработанные</a>
-            </td>
-          </tr>
+        <table class="contract-state-table state">
+          <tr class="state__row"><td class="state__cell state__cell--link-new"><a href="#">Новые</a></td></tr>
+          <tr class="state__row"><td class="state__cell state__cell--not-viewed"><a href="#">Требуют согласования</a></td></tr>
+          <tr class="state__row"><td class="state__cell state__cell--viewed"><a href="#">Обработанные</a></td></tr>
         </table>
-        <table class="contract-table contract-table--inform">
-          <tr class="contract-table__row contract-table__row--inform">
-            <td class="contract-table__cell contract-table__cell--inform">
-              <div class="contract-table__select contract-table__select--all">Все</div>
-            </td>
-            <td class="contract-table__cell contract-table__cell--inform">
-              <div class="contract-table__select contract-table__select--networks">Все торговые сети</div>
-            </td>
-            <td class="contract-table__cell contract-table__cell--inform">
-              <div class="contract-table__select contract-table__select--states">Все статусы</div>
-            </td>
-            <td class="contract-table__cell contract-table__cell--inform">
-              <div class="contract-table__search">
-                <input class="contract-table__search contract-table__search--input" placeholder="Номер документа целиком"></input>
+      <div class="tables-container">
+        <table class="filter-table filters">
+          <tr class="filters__row filters__row--inform">
+            <td class="filters__cell select">
+              <div class="select__block select__block--all">Все</div>
+              <div class="select__block select__block--networks">Все торговые сети</div>
+              <div class="select__block select__block--all-states">Все статусы</div>
+              <div class="select__block select__block--search search">
+                <input class="search__input" placeholder="Номер документа целиком">
               </div>
+              <div class="select__block select__block--all-filters">Все фильтры</div>
             </td>
-            <td class="contract-table__cell contract-table__cell--inform">
-              <div class="contract-table__filters">Все фильтры</div>
-            </td>
-          </tr>
-          <tr class="contract-table__row contract-table__row--inform">
-            <td class="contract-table__cell contract-table__cell--inform contract-table__cell--checkbox">
-              <input type="checkbox"></input>
-            </td>
-            <td class="contract-table__cell contract-table__cell--inform">Отправитель</td>
-            <td class="contract-table__cell contract-table__cell--inform">№, дата документа</td>
-            <td class="contract-table__cell contract-table__cell--inform">Статус</td>
-            <td class="contract-table__cell contract-table__cell--inform">Дата получения</td>
-          </tr>
-          <tr class="contract-table__row contract-table__row--inform">
-            <td class="contract-table__cell contract-table__cell--inform contract-table__cell--checkbox">
-              <input type="checkbox"></input>
-            </td>
-            <td class="contract-table__cell contract-table__cell--inform contract-table__cell--partner">
-              <p class="contract-table__partner-name">Тестовый контрагент</p>
-            </td>
-            <td class="contract-table__cell contract-table__cell--inform contract-table__cell--numdoc">
-              <span class="contract-table__number">455664456</span>
-              <span class="contract-table__docdate">04.06.19</span>
-            </td>
-            <td class="contract-table__cell contract-table__cell--inform contract-table__cell--state">На подписании</td>
-            <td class="contract-table__cell contract-table__cell--inform contract-table__cell--date"><time>Сегодня</time>, <time>11:30</time></td>
           </tr>
         </table>
+        <table class="contract-table">
+          <tr class="contract-table__row">
+            <td class="contract-table__cell contract-table__cell--inform contract-table__cell--checkbox">
+              <input type="checkbox">
+            </td>
+            <td class="contract-table__cell">Отправитель</td>
+            <td class="contract-table__cell">№, дата документа</td>
+            <td class="contract-table__cell">Статус</td>
+            <td class="contract-table__cell">Дата получения</td>
+          </tr>
+          <tr class="contract-table__row">
+            <td class="contract-table__cell contract-table__cell--checkbox">
+              <input type="checkbox">
+            </td>
+            <td class="contract-table__cell contract-table__cell--partner">
+              <span class="contract-table__partner-name">Тестовый контрагент</span>
+            </td>
+            <td class="contract-table__cell contract-table__cell--numdoc">
+              <span class="contract-table__number">455664456</span><br>
+              <div class="contract-table__docdate">04.06.19</div>
+            </td>
+            <td class="contract-table__cell contract-table__cell--state">На подписании</td>
+            <td class="contract-table__cell contract-table__cell--date"><time>Сегодня</time>, <time>11:30</time></td>
+          </tr>
+        </table>
+      </div>
       </section>
     </main>
   </body>
