@@ -1,14 +1,39 @@
 .state {
-  width: 10%
+  width: 13%
 }
 
 .state::before {
   content: "";
   display: block;
   position: absolute;
-  margin-left: -10px;
-  margin-top: -10px;
+  /*margin-left: -10px;*/
+  margin-top: 0;
   width: 1px;
   height: 100%;
   background-color: #e5e5e5;
+}
+
+.state__cell {
+  padding-left: 10px;
+  border-bottom: 2px solid rgba(220, 220, 220, 0.3);
+  border-right: 2px solid rgba(220, 220, 220, 0.3);
+}
+
+.state__cell:active {
+  background-color: #f6f6f6;
+  border-left: 4px solid #0053e5;
+}
+
+.state__cell:active a {
+  color: #0053e5;
+  font-weight: bold;
+}
+
+.state__mark {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50% 50% 50% 50%;
+  background-color: #ff5100;
+  margin-left: 14px;
 }
