@@ -16,7 +16,7 @@
             <li class="menu-list__item"><a href="#">Маршруты</a></li>
             <li class="menu-list__item"><a href="#">Справочники</a></li>
           </ul>
-          <select class="main-nav__select"><option value="template">Производитель рыбы ТОО</option></select>
+          <select class="main-nav__select select__item"><option value="template">Производитель рыбы ТОО</option></select>
           <ul class="main-nav__user-list user-list">
             <li class="user-list__item">
               <a class="user-list__link" href="#" title="Справка">
@@ -69,6 +69,19 @@
             </ul>
         </div>
       </section>
+      <section class="create-window create-window--open create-window--close">
+        <div class="create-window__block">
+          <h3 class="create-window__title">Создать пакет документов</h3>
+          <button class="create-window__exit-btn btn"></button>
+          <div class="create-window__search search">
+            <input class="search__input" placeholder="Номер документа целиком">
+          </div>
+          <div class="create-window__select select">
+            <p class="select__head">Отфильтровать по контрагенту</p>
+            <select class="select__item select__item--create"><option value="partner">ООО "Ромашка"</option></select>
+          </div>
+        </div>
+      </section>
       <section class="page-main__right-column">
         <table class="contract-state-table state">
           <tr class="state__row"><td class="state__cell state__cell--link-new"><a href="#">Новые</a></td></tr>
@@ -84,20 +97,23 @@
         <table class="filter-table filters">
           <tr class="filters__row filters__row--inform">
             <td class="filters__cell select">
-              <select class="select__block select__block--all"><option value="all">Все</option></select>
-              <select class="select__block select__block--networks"><option value="all-networks">Все торговые сети</option></select>
-              <select class="select__block select__block--all-states"><option value="all-states">Все статусы</option></select>
-              <div class="select__block select__block--search search">
+              <select class="select__item select__item--all"><option value="all">Все</option></select>
+              <select class="select__item select__item--networks"><option value="all-networks">Все торговые сети</option></select>
+              <select class="select__item select__item--all-states"><option value="all-states">Все статусы</option></select>
+              <div class="select__item search">
                 <input class="search__input" placeholder="Номер документа целиком">
               </div>
-              <div class="select__block select__block--all-filters">Все фильтры</div>
+              <div class="select__item select__item--all-filters">Все фильтры</div>
             </td>
           </tr>
         </table>
         <table class="contract-table">
           <tr class="contract-table__row">
             <td class="contract-table__cell contract-table__cell--inform contract-table__cell--checkbox">
-              <input type="checkbox">
+              <label class="contract-table__lable">
+                <input class="contract-table__input" type="checkbox">
+                <span class="contract-table__checkbox"></span>
+              </label>
             </td>
             <td class="contract-table__cell">Отправитель</td>
             <td class="contract-table__cell">№, дата документа</td>
@@ -106,7 +122,10 @@
           </tr>
           <tr class="contract-table__row">
             <td class="contract-table__cell contract-table__cell--checkbox">
-              <input type="checkbox">
+              <label class="contract-table__lable">
+                <input class="contract-table__input" type="checkbox">
+                <span class="contract-table__checkbox"></span>
+              </label>
             </td>
             <td class="contract-table__cell contract-table__cell--partner">
               <span class="contract-table__partner-name">Тестовый контрагент</span>
