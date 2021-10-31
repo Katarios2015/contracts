@@ -23,11 +23,6 @@
   padding-right: 10px;
 }
 
-.contract-table__cell--checkbox input {
-  width: 15px;
-  height: 15px;
-}
-
 .contract-table__docdate {
   font-size: 12px;
   margin-top: -10px;
@@ -52,4 +47,54 @@
 
 .contract-table__cell:nth-child(2) {
   width: 42%;
+}
+
+.contract-table__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.contract-table__checkbox {
+  position: absolute;
+  width: 11px;
+  height: 10px;
+  margin-top: -4px;
+  /*background-color: @rgba-gray;*/
+  border-radius: 10% 10% 10% 10%;
+  border: 2px solid #d9dce4;
+  background-position: 50% 50%;
+}
+
+.contract-table__input:checked + .contract-table__checkbox {
+  background-color: @rgba-gray;
+  background-image: url(../img/check.svg);
+  background-repeat: no-repeat;
+}
+
+.contract-table__input:focus + .contract-table__checkbox {
+  border: 2px solid @dark-blue;
+}
+
+.contract-table__input:hover + .contract-table__checkbox {
+  border: 2px solid @dark-blue;
+}
+
+.contract-table__input:checked:disabled + .contract-table__checkbox {
+  background-color: @rgba-gray;
+  background-image: url(../img/check_disable.svg);
+  border: 2px solid #d9dce4;
+}
+
+.contract-table__input:disabled + .contract-table__checkbox {
+  background-color: @rgba-gray;
+  border: 2px solid #d9dce4;
+}
+
+.contract-table__input:checked + .contract-table__checkbox:active {
+  background-color: @rgba-gray;
+  background-image: url(../img/check_disable.svg);
+  border: 2px solid #d9dce4;
 }
