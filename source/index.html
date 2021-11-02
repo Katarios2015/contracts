@@ -69,17 +69,29 @@
             </ul>
         </div>
       </section>
-      <section class="create-window create-window--open create-window--close">
-        <div class="create-window__block">
+      <section class="create-window">
+        <div class="create-window__wrapper">
           <h3 class="create-window__title">Создать пакет документов</h3>
           <button class="create-window__exit-btn btn"></button>
-          <div class="create-window__search search">
-            <input class="search__input" placeholder="Номер документа целиком">
+          <div class="create-window__search search search--create">
+            <input class="search__input search__input--create" placeholder="Номер документа целиком">
           </div>
           <div class="create-window__select select">
             <p class="select__head">Отфильтровать по контрагенту</p>
-            <select class="select__item select__item--create"><option value="partner">ООО "Ромашка"</option></select>
+            <select class="select__item select__item--create">
+              <option value="partner">ООО "Ромашка"</option>
+            </select>
           </div>
+          <ul class="create-window__partner-list partner-list">
+            <li class="partner-list__item">
+              <a class="partner-list__link" href="#">Договор поставки</a>
+              <span class="partner-list__company">ООО "Ромашка"</span>
+            </li>
+            <li class="partner-list__item">
+              <a class="partner-list__link" href="#">Договор аренды</a>
+              <span class="partner-list__company">ООО "Ромашка"</span>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="page-main__right-column">
@@ -142,5 +154,6 @@
       </section>
     </main>
     <script src="/js/svgxuse.js"></script>
+    <script src="/js/side-menu__btn.js"></script>
   </body>
 </html>
