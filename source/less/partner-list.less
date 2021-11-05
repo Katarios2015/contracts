@@ -1,0 +1,33 @@
+.partner-list {
+  display: block;
+}
+
+.partner-list--open {
+  display: block;
+  .list-style-none;
+}
+
+.partner-list li {
+  padding: 10px 0;
+  cursor: url(../img/pointer15.png) 4 12, auto;
+}
+
+.partner-list__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.partner-list__item a {
+  text-decoration: none;
+  color: @black;
+  cursor: url(../img/pointer15.png) 4 12, auto;
+}
+
+.partner-list__item:hover {
+  background-color: #f6f6f6;
+  border-bottom: 2px solid @rgba-gray;
+}
+
+.partner-list__item:active a {
+  font-weight: bold;
+}

@@ -11,29 +11,29 @@
         <div class="main-nav__wrapper">
           <img class="main-nav__logo" src="img/logo.png" width="40" height="45" alt="логотип">
           <ul class="main-nav__menu-list menu-list">
-            <li class="menu-list__item"><a href="#">Документы</a></li>
-            <li class="menu-list__item"><a href="#">Конструктор</a></li>
-            <li class="menu-list__item"><a href="#">Маршруты</a></li>
-            <li class="menu-list__item"><a href="#">Справочники</a></li>
+            <li class="menu-list__item"><a class="menu-list__link link" href="#">Документы</a></li>
+            <li class="menu-list__item"><a class="menu-list__link link" href="#">Конструктор</a></li>
+            <li class="menu-list__item"><a class="menu-list__link link" href="#">Маршруты</a></li>
+            <li class="menu-list__item"><a class="menu-list__link link" href="#">Справочники</a></li>
           </ul>
           <select class="main-nav__select select__item"><option value="template">Производитель рыбы ТОО</option></select>
           <ul class="main-nav__user-list user-list">
             <li class="user-list__item">
-              <a class="user-list__link" href="#" title="Справка">
+              <a class="user-list__link link" href="#" title="Справка">
                 <svg class="user-list__svg user-list__svg--color" width="10px" height="10px">
                   <use href="../img/help_icon.svg#help_icon"></use>
                 </svg>
                 </a>
               </li>
             <li class="user-list__item">
-              <a href="#" title="Настройки">
+              <a class="user-list__link link" href="#" title="Настройки">
                 <svg class="user-list__svg user-list__svg--color" width="10px" height="10px">
                   <use href="../img/setting_icon.svg#setting_icon"></use>
                 </svg>
               </a>
             </li>
             <li class="user-list__item">
-              <a href="#" title="Авторизация">
+              <a class="user-list__link link" href="#" title="Авторизация">
                 <svg class="user-list__svg user-list__svg--color" width="10px" height="10px">
                   <use href="../img/input_icon.svg#input_icon"></use>
                 </svg>
@@ -52,19 +52,19 @@
                 <svg class="left-list__svg left-list__svg--color" width="10px" height="10px">
                   <use href="../img/inbox_icon.svg#inbox_icon"></use>
                 </svg>
-                <a href="#">Входящие</a>
+                <a class="left-list__link link" href="#">Входящие</a>
               </li>
               <li class="left-list__item">
                 <svg class="left-list__svg left-list__svg--color" width="10px" height="10px">
                   <use href="../img/sent_icon.svg#sent_icon"></use>
                 </svg>
-                <a href="#">Отправленные</a>
+                <a class="left-list__link link" href="#">Отправленные</a>
               </li>
               <li class="left-list__item">
                 <svg class="left-list__svg left-list__svg--color" width="10px" height="10px">
                   <use href="../img/list_icon.svg#list_icon"></use>
                 </svg>
-                <a href="#">Черновики</a>
+                <a class="left-list__link link" href="#">Черновики</a>
               </li>
             </ul>
         </div>
@@ -80,15 +80,26 @@
             <p class="select__head">Отфильтровать по контрагенту</p>
             <select class="select__item select__item--create">
               <option value="partner">ООО "Ромашка"</option>
+              <option value="partner2">ООО "Ромашка2"</option>
             </select>
           </div>
           <ul class="create-window__partner-list partner-list">
             <li class="partner-list__item">
-              <a class="partner-list__link" href="#">Договор поставки</a>
+              <a class="partner-list__link link" href="#">Договор поставки</a>
               <span class="partner-list__company">ООО "Ромашка"</span>
             </li>
             <li class="partner-list__item">
-              <a class="partner-list__link" href="#">Договор аренды</a>
+              <a class="partner-list__link link" href="#">Договор аренды</a>
+              <span class="partner-list__company">ООО "Ромашка"</span>
+            </li>
+          </ul>
+          <ul class="create-window__partner-list partner-list">
+            <li class="partner-list__item">
+              <a class="partner-list__link link" href="#">Договор поставки</a>
+              <span class="partner-list__company">ООО "Ромашка"</span>
+            </li>
+            <li class="partner-list__item">
+              <a class="partner-list__link link" href="#">Договор аренды</a>
               <span class="partner-list__company">ООО "Ромашка"</span>
             </li>
           </ul>
@@ -96,14 +107,16 @@
       </section>
       <section class="page-main__right-column">
         <table class="contract-state-table state">
-          <tr class="state__row"><td class="state__cell state__cell--link-new"><a href="#">Новые</a></td></tr>
+          <tr class="state__row"><td class="state__cell state__cell--link-new">
+            <a class="state__link link" href="#">Новые</a></td></tr>
           <tr class="state__row">
             <td class="state__cell state__cell--not-viewed">
-              <a href="#">Требуют согласования</a>
+              <a class="state__link link" href="#">Требуют согласования</a>
               <span class="state__mark"></span>
             </td>
         </tr>
-          <tr class="state__row"><td class="state__cell state__cell--viewed"><a href="#">Обработанные</a></td></tr>
+          <tr class="state__row"><td class="state__cell state__cell--viewed">
+            <a class="state__link link" href="#">Обработанные</a></td></tr>
         </table>
       <div class="tables-container">
         <table class="filter-table filters">
